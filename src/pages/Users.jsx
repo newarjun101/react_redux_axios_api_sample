@@ -7,6 +7,8 @@ const UserListing = () => {
 	const { isLoading, users, errorMessage } = useSelector((state) => state.users);
 
 	useEffect(() => {
+
+       console.log(users);
 		dispatch(loadUserAsync());
 	}, []);
 
@@ -15,7 +17,7 @@ const UserListing = () => {
 			<h1>User Listing</h1>
 			{isLoading && <h3>Loading...</h3>}
 			{errorMessage && <h3>{errorMessage}</h3>}
-			{users && users.map((user) => <h5 key={user.id}>{user.name}</h5>)}
+			{users && users.map((user) => <h5 key={user.id}>{user.title}</h5>)}
 		</div>
 	);
 };
