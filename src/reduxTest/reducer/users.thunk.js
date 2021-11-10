@@ -1,6 +1,6 @@
 import { getAllUsers } from "../../services/user.service";
 import action from "./users.action"
-
+/// this funtion send data to user.action.js 
 export const loadUserAsync = () => (dispatch) => {
 
 
